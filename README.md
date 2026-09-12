@@ -1,3 +1,4 @@
+![Tests](https://github.com/codebyyosry/laravel_movie-api/actions/workflows/tests.yml/badge.svg)
 # 🎬 Movie REST API
 
 A Laravel-based backend-only REST API that wraps [The Movie Database (TMDB)](https://www.themoviedb.org/)
