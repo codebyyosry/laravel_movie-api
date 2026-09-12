@@ -1,0 +1,15 @@
+# 1. Copy the docker env file
+cp .env.docker.example .env.docker
+
+# 2. Build and start containers
+docker compose --env-file .env.docker up -d --build
+
+# 3. Generate app key and JWT secret INSIDE the container
+docker compose exec app php artisan key:generate
+docker compose exec app php artisan jwt:secret
+
+# 4. Run migrations INSIDE the container
+docker compose exec app php artisan migrate
+
+# 5. Visit the API
+# http://localhost:8001/api/movies/popular
